@@ -28,6 +28,7 @@ class AddTableTableViewController: UITableViewController, UIImagePickerControlle
             let imagePicker = UIImagePickerController()
                 imagePicker.allowsEditing = false
                 imagePicker.sourceType = .PhotoLibrary //从照片库获取，.Camera从摄像头拍摄
+                imagePicker.delegate = self //设置代理！！！！
                 self.presentViewController(imagePicker, animated: true, completion: nil)
             }
         }
@@ -35,9 +36,8 @@ class AddTableTableViewController: UITableViewController, UIImagePickerControlle
     }
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
-        print("hello world")
         imageView.image = info[UIImagePickerControllerOriginalImage] as? UIImage
-        imageView.contentMode = UIViewContentMode.ScaleAspectFit
+        imageView.contentMode = UIViewContentMode.ScaleAspectFill
         imageView.clipsToBounds = true
                 
         dismissViewControllerAnimated(true, completion: nil)

@@ -110,7 +110,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="HRe-Cp-Siy">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
-                                <segue destination="cjY-w8-hI6" kind="presentation" id="8zn-RS-8eB"/>
+                                <segue destination="cjY-w8-hI6" kind="presentation" identifier="addRestaurant" id="8zn-RS-8eB"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -555,7 +555,7 @@
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="N4G-c3-pTb">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
-                                <segue destination="04v-B1-aAm" kind="unwind" unwindAction="unwindToHomeScreen:" id="kxN-vV-Nuy"/>
+                                <segue destination="04v-B1-aAm" kind="unwind" unwindAction="unwindToHomeScreen:" id="IRP-Oj-LnJ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
