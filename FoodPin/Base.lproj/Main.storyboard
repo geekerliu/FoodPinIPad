@@ -390,7 +390,7 @@
                                         <rect key="frame" x="0.0" y="314" width="600" height="72"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vP8-Oz-BXa" id="4tW-QY-DyL">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="72"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="71.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Restaurant Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YtO-YZ-Pse">
@@ -518,6 +518,9 @@
                                                     </constraints>
                                                     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <state key="normal" title="YES"/>
+                                                    <connections>
+                                                        <action selector="yesOrNoButtonBeenTaped:" destination="Xcy-IV-yR4" eventType="touchUpInside" id="NJD-U2-zxf"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YE7-RK-j0a">
                                                     <rect key="frame" x="134" y="37" width="30" height="30"/>
@@ -529,6 +532,9 @@
                                                     </constraints>
                                                     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <state key="normal" title="NO"/>
+                                                    <connections>
+                                                        <action selector="yesOrNoButtonBeenTaped:" destination="Xcy-IV-yR4" eventType="touchUpInside" id="Nvo-6g-w3B"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <animations/>
@@ -555,12 +561,23 @@
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="N4G-c3-pTb">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
-                                <segue destination="04v-B1-aAm" kind="unwind" unwindAction="unwindToHomeScreen:" id="IRP-Oj-LnJ"/>
+                                <segue destination="04v-B1-aAm" kind="unwind" identifier="unwindToHomeScreen" unwindAction="unwindToHomeScreen:" id="IRP-Oj-LnJ"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="kxI-hp-l3s">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="save:" destination="Xcy-IV-yR4" id="3Tr-8X-j4L"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="imageView" destination="BxI-Il-1Ag" id="9WH-Qw-kR4"/>
+                        <outlet property="locationTextField" destination="vc7-Gt-xap" id="lIN-1R-luK"/>
+                        <outlet property="nameTextField" destination="YtO-YZ-Pse" id="U5r-dQ-NhP"/>
+                        <outlet property="noButton" destination="YE7-RK-j0a" id="HtL-23-cKP"/>
+                        <outlet property="typeTextField" destination="j2g-0V-kw3" id="vM0-RM-7Kl"/>
+                        <outlet property="yesButton" destination="yqU-iY-bfx" id="fVB-gv-J4S"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W6G-YW-OXh" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -20,7 +20,7 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        restaurantImageView.image = UIImage(named: restaurant.image)
+        restaurantImageView.image = UIImage(data: restaurant.image)
         //修改tableview的背景
         tableView.backgroundColor = UIColor(red: 240.0/255.0, green: 240.0/255.0, blue: 240.0/255.0, alpha: 0.2)
         //去掉多余的行
@@ -61,7 +61,7 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
             cell.mapButton.hidden = false
         case 3:
             cell.fieldLabel.text = "Been here"
-            cell.valueLabel.text = restaurant.isVisited ? "Yes, I've been here before" : "No"
+            cell.valueLabel.text = restaurant.isVisited.boolValue ? "Yes, I've been here before" : "No"
         default:
             cell.fieldLabel.text = ""
             cell.valueLabel.text = ""
@@ -79,10 +79,10 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
         navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
-    //把状态栏改成白色
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return UIStatusBarStyle.LightContent
-    }
+//    //把状态栏改成白色
+//    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+//        return UIStatusBarStyle.LightContent
+//    }
     
     //场景转换
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
