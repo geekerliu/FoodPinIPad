@@ -9,14 +9,15 @@
 import UIKit
 import CoreData
 
-class RestaurantTableTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
+class RestaurantTableTableViewController: UITableViewController, NSFetchedResultsControllerDelegate, UISearchResultsUpdating {
 
     @IBAction func unwindToHomeScreen(segue:UIStoryboardSegue) {
     }
     
     var fetchResultController:NSFetchedResultsController!
     var restaurants:[Restaurant] = []
-    var restaurantIsVisited = [Bool](count: 24, repeatedValue: true)
+    var searchController:UISearchController!
+    var searchResults:[Restaurant] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,10 +47,38 @@ class RestaurantTableTableViewController: UITableViewController, NSFetchedResult
         } catch {
             print("error = \(error)")
         }
+        
+        // 添加搜索栏
+        searchController = UISearchController(searchResultsController: nil)
+        searchController.searchBar.sizeToFit()
+        tableView.tableHeaderView = searchController.searchBar
+        definesPresentationContext = true
+        searchController.searchResultsUpdater = self //assigns the current class as the search results updater
+        searchController.dimsBackgroundDuringPresentation = false // 搜索的时候不模糊背景
+        searchController.searchBar.placeholder = "Search your restaurant"
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    //MARK: - search
+    // implemented the search logic
+    func filterContentForSearchText(searchText: String) {
+        searchResults = restaurants.filter({ (restaurant: Restaurant) -> Bool in
+            let nameMatch = restaurant.name.rangeOfString(searchText, options: NSStringCompareOptions.CaseInsensitiveSearch)
+            let locationMatch = restaurant.location.rangeOfString(searchText)
+            return nameMatch != nil || locationMatch != nil
+        })
+    }
+    
+    func updateSearchResultsForSearchController(searchController: UISearchController) {
+        // 获取用户的输入
+        let searchText = searchController.searchBar.text
+        // 调用过滤方法
+        filterContentForSearchText(searchText!)
+        // 更新tableView数据
+        tableView.reloadData()
     }
     
     //MARK: - NSFetchedResultsControllerDelegate 
@@ -86,22 +115,28 @@ class RestaurantTableTableViewController: UITableViewController, NSFetchedResult
     
     //每组有多少行
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return restaurants.count
+        if searchController.active == true {
+            return searchResults.count
+        } else {
+            return restaurants.count
+        }
     }
 
     //每一行的内容
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cellIdentifier = "Cell"
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! CustomTableViewCell
-        cell.nameLabel.text = restaurants[indexPath.row].name
-        cell.thumbnailImageView.image = UIImage(data: restaurants[indexPath.row].image)
+        let restaurant = (searchController.active) ? searchResults[indexPath.row] : restaurants[indexPath.row]
+        
+        cell.nameLabel.text = restaurant.name
+        cell.thumbnailImageView.image = UIImage(data: restaurant.image)
         //将图片变圆
         cell.thumbnailImageView.layer.cornerRadius = cell.thumbnailImageView.frame.size.width / 2
         cell.thumbnailImageView.clipsToBounds = true
-        cell.locationLabel.text = restaurants[indexPath.row].location
-        cell.typeLabel.text = restaurants[indexPath.row].type
+        cell.locationLabel.text = restaurant.location
+        cell.typeLabel.text = restaurant.type
         cell.heartImageView.image = UIImage(named: "heart")
-        cell.heartImageView.hidden = restaurantIsVisited[indexPath.row]
+        cell.heartImageView.hidden = restaurant.isVisited.boolValue
             
         return cell
     }
@@ -145,12 +180,22 @@ class RestaurantTableTableViewController: UITableViewController, NSFetchedResult
         return [deleteAction, shareAction]
     }
     
+    //在搜索的时候禁止编辑
+    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        if searchController.active {
+            return false
+        } else {
+            return true
+        }
+    }
+    
+    //MARK: - Another
     //场景转换
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         if segue.identifier == "showRestaurantDetail" {
             if let indexPath = tableView.indexPathForSelectedRow {
                 let destinationController = segue.destinationViewController as! DetailViewController
-                destinationController.restaurant = restaurants[indexPath.row]
+                destinationController.restaurant = (searchController.active) ? searchResults[indexPath.row] : self.restaurants[indexPath.row]
             }
         }
     }
