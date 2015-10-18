@@ -30,7 +30,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UIToolbar.appearance().barTintColor = UIColor(red: 237.0/255.0, green: 240.0/255.0, blue:
             243.0/255.0, alpha: 0.5)
         
-        //修改状态栏的颜色
+        //修改tab bar的样式
+        // Customizing the Appearance of Tab Bar
+        UITabBar.appearance().tintColor = UIColor(red: 235.0/255.0, green: 75.0/255.0, blue: 27.0/255.0, alpha: 1.0)
+        UITabBar.appearance().barTintColor = UIColor.blackColor()        //修改状态栏的颜色
 //        UIApplication.sharedApplication().statusBarStyle = .LightContent
         return true
     }
