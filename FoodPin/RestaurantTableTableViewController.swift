@@ -147,7 +147,7 @@ class RestaurantTableTableViewController: UITableViewController, NSFetchedResult
         cell.locationLabel.text = restaurant.location
         cell.typeLabel.text = restaurant.type
         cell.heartImageView.image = UIImage(named: "heart")
-        cell.heartImageView.hidden = restaurant.isVisited.boolValue
+        cell.heartImageView.hidden = !restaurant.isVisited.boolValue
             
         return cell
     }

@@ -840,10 +840,10 @@
             </objects>
             <point key="canvasLocation" x="626" y="117"/>
         </scene>
-        <!--more-->
+        <!--About-->
         <scene sceneID="Y0U-dS-vSi">
             <objects>
-                <viewController title="more" id="cec-Wf-UZs" sceneMemberID="viewController">
+                <viewController id="cec-Wf-UZs" customClass="AboutViewController" customModule="FoodPin" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="19e-s9-icS"/>
                         <viewControllerLayoutGuide type="bottom" id="Pwo-nq-fJe"/>
@@ -851,14 +851,89 @@
                     <view key="view" contentMode="scaleToFill" id="YcT-og-EeN">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="about" translatesAutoresizingMaskIntoConstraints="NO" id="puY-eS-4N8">
+                                <rect key="frame" x="200" y="72" width="200" height="200"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="YBh-Nm-YxI"/>
+                                    <constraint firstAttribute="height" constant="200" id="ctW-CI-yW6"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1fA-Pn-V9r">
+                                <rect key="frame" x="243" y="339" width="114" height="30"/>
+                                <animations/>
+                                <color key="backgroundColor" red="1" green="0.1039663844" blue="0.1341283039" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Visit our website"/>
+                                <connections>
+                                    <segue destination="1TS-Ei-36c" kind="show" id="F43-gM-xSe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v0s-rb-lrx">
+                                <rect key="frame" x="243" y="294" width="114" height="30"/>
+                                <animations/>
+                                <color key="backgroundColor" red="1" green="0.1039663844" blue="0.1341283039" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Contact Us"/>
+                                <connections>
+                                    <action selector="sendEmail:" destination="cec-Wf-UZs" eventType="touchUpInside" id="wbO-WX-rF8"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1fA-Pn-V9r" firstAttribute="width" secondItem="v0s-rb-lrx" secondAttribute="width" id="FkD-cF-YBf"/>
+                            <constraint firstItem="1fA-Pn-V9r" firstAttribute="top" secondItem="v0s-rb-lrx" secondAttribute="bottom" constant="15" id="GSS-VC-d7I"/>
+                            <constraint firstItem="v0s-rb-lrx" firstAttribute="centerX" secondItem="YcT-og-EeN" secondAttribute="centerX" id="GU3-y1-Lgj"/>
+                            <constraint firstItem="1fA-Pn-V9r" firstAttribute="height" secondItem="v0s-rb-lrx" secondAttribute="height" id="boa-MK-2eU"/>
+                            <constraint firstItem="puY-eS-4N8" firstAttribute="centerX" secondItem="YcT-og-EeN" secondAttribute="centerX" id="dJw-yS-qub"/>
+                            <constraint firstItem="puY-eS-4N8" firstAttribute="top" secondItem="19e-s9-icS" secondAttribute="bottom" constant="8" id="mTK-Ji-Y0a"/>
+                            <constraint firstItem="v0s-rb-lrx" firstAttribute="top" secondItem="puY-eS-4N8" secondAttribute="bottom" constant="22" id="ysQ-VK-tc8"/>
+                            <constraint firstItem="1fA-Pn-V9r" firstAttribute="centerX" secondItem="YcT-og-EeN" secondAttribute="centerX" id="zsU-8X-RWq"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="About" id="eBz-fy-LuK"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kSm-TA-rJB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-186" y="1660"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="bM6-kR-6qs">
+            <objects>
+                <viewController hidesBottomBarWhenPushed="YES" id="1TS-Ei-36c" customClass="WebViewController" customModule="FoodPin" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uQ8-Dt-etX"/>
+                        <viewControllerLayoutGuide type="bottom" id="b0J-D0-0xE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZoM-hr-GaT">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="159-Ot-1Iq">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="595"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="159-Ot-1Iq" firstAttribute="top" secondItem="ZoM-hr-GaT" secondAttribute="top" id="4uD-MP-EGH"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="159-Ot-1Iq" secondAttribute="bottom" constant="5" id="Gcf-v0-cTr"/>
+                            <constraint firstItem="159-Ot-1Iq" firstAttribute="leading" secondItem="ZoM-hr-GaT" secondAttribute="leading" id="l0L-dm-4Rc"/>
+                            <constraint firstAttribute="trailing" secondItem="159-Ot-1Iq" secondAttribute="trailing" id="sg5-b6-DRc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="159-Ot-1Iq" id="A2H-rO-mWf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3EE-at-1m9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-186" y="2356"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="32h-nj-JKH">
@@ -971,6 +1046,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="about" width="1024" height="1024"/>
         <image name="bad" width="64" height="64"/>
         <image name="cafeloisl" width="640" height="640"/>
         <image name="camera" width="256" height="256"/>
