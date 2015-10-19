@@ -1,0 +1,75 @@
+/* Class = "UILabel"; text = "TYPE"; ObjectID = "0df-Wg-8JI"; */
+"0df-Wg-8JI.text" = "类型";
+
+/* Class = "UIButton"; normalTitle = "Visit our website"; ObjectID = "1fA-Pn-V9r"; */
+"1fA-Pn-V9r.normalTitle" = "访问我们的网站";
+
+/* Class = "UILabel"; text = "HAVE YOU BEEN HERE"; ObjectID = "4Zr-3y-3iD"; */
+"4Zr-3y-3iD.text" = "你来过这里吗";
+
+/* Class = "UILabel"; text = "Type"; ObjectID = "6PK-Y0-rXH"; */
+"6PK-Y0-rXH.text" = "类型";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "7tj-Nd-Ark"; */
+"7tj-Nd-Ark.text" = "名字";
+
+/* Class = "UINavigationController"; title = "more"; ObjectID = "9oB-jv-bVU"; */
+"9oB-jv-bVU.title" = "更多";
+
+/* Class = "UILabel"; text = "LOCATION"; ObjectID = "BlC-k1-G3t"; */
+"BlC-k1-G3t.text" = "地点";
+
+/* Class = "UINavigationItem"; title = "Feed"; ObjectID = "FP5-OR-az0"; */
+"FP5-OR-az0.title" = "发现";
+
+/* Class = "UIButton"; normalTitle = "Map"; ObjectID = "GV8-3X-YDl"; */
+"GV8-3X-YDl.normalTitle" = "地图";
+
+/* Class = "UIButton"; normalTitle = "Get Started"; ObjectID = "I9Y-tq-8kP"; */
+"I9Y-tq-8kP.normalTitle" = "开始";
+
+/* Class = "UINavigationController"; title = "Feed"; ObjectID = "IJT-gu-Wy9"; */
+"IJT-gu-Wy9.title" = "发现";
+
+/* Class = "UILabel"; text = "NAME"; ObjectID = "Miu-RN-7GU"; */
+"Miu-RN-7GU.text" = "名字";
+
+/* Class = "UINavigationItem"; title = "New Restaurant"; ObjectID = "XSe-cN-PgX"; */
+"XSe-cN-PgX.title" = "添加新的餐厅";
+
+/* Class = "UIButton"; normalTitle = "NO"; ObjectID = "YE7-RK-j0a"; */
+"YE7-RK-j0a.normalTitle" = "没有";
+
+/* Class = "UITextField"; placeholder = "Restaurant Name"; ObjectID = "YtO-YZ-Pse"; */
+"YtO-YZ-Pse.placeholder" = "餐厅的名字";
+
+/* Class = "UINavigationItem"; title = "Food Pin"; ObjectID = "bYC-Wg-MOQ"; */
+"bYC-Wg-MOQ.title" = "美食记";
+
+/* Class = "UILabel"; text = "Location"; ObjectID = "cQn-gy-qV1"; */
+"cQn-gy-qV1.text" = "地点";
+
+/* Class = "UINavigationItem"; title = "About"; ObjectID = "eBz-fy-LuK"; */
+"eBz-fy-LuK.title" = "关于我们";
+
+/* Class = "UILabel"; text = "You’ve dined here. What did you think?"; ObjectID = "hgj-Yh-MAP"; */
+"hgj-Yh-MAP.text" = "你来过这里，觉得这里怎么样？";
+
+/* Class = "UITabBarItem"; title = "More"; ObjectID = "iZc-QA-RYL"; */
+"iZc-QA-RYL.title" = "更多";
+
+/* Class = "UITextField"; placeholder = "Restaurant Type"; ObjectID = "j2g-0V-kw3"; */
+"j2g-0V-kw3.placeholder" = "餐厅类型";
+
+/* Class = "UINavigationController"; title = "Favorites"; ObjectID = "u6X-8I-EXd"; */
+"u6X-8I-EXd.title" = "最爱";
+
+/* Class = "UIButton"; normalTitle = "Contact Us"; ObjectID = "v0s-rb-lrx"; */
+"v0s-rb-lrx.normalTitle" = "联系我们";
+
+/* Class = "UITextField"; placeholder = "Restaurant Location"; ObjectID = "vc7-Gt-xap"; */
+"vc7-Gt-xap.placeholder" = "餐厅地点";
+
+/* Class = "UIButton"; normalTitle = "YES"; ObjectID = "yqU-iY-bfx"; */
+"yqU-iY-bfx.normalTitle" = "来过";
+

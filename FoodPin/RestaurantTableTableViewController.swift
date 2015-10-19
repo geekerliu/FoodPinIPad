@@ -66,7 +66,7 @@ class RestaurantTableTableViewController: UITableViewController, NSFetchedResult
         definesPresentationContext = true
         searchController.searchResultsUpdater = self //assigns the current class as the search results updater
         searchController.dimsBackgroundDuringPresentation = false // 搜索的时候不模糊背景
-        searchController.searchBar.placeholder = "Search your restaurant"
+        searchController.searchBar.placeholder = NSLocalizedString("Search your restaurant", comment:"search your restaurant")
     }
 
     override func didReceiveMemoryWarning() {
@@ -154,16 +154,12 @@ class RestaurantTableTableViewController: UITableViewController, NSFetchedResult
  
     //自定义滑动动作
     override func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
-        let shareAction = UITableViewRowAction(style: .Default, title: "Share") { (action, indexPath) -> Void in
-            let shareMenu = UIAlertController(title: nil, message: "Share using", preferredStyle: .Alert)
-            let twitterAction = UIAlertAction(title: "Twitter", style:
-                    UIAlertActionStyle.Default, handler: nil)
-            let facebookAction = UIAlertAction(title: "Facebook", style:
-                    UIAlertActionStyle.Default, handler: nil)
-            let emailAction = UIAlertAction(title: "Email", style: UIAlertActionStyle.Default,
-                    handler: nil)
-            let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel,
-                    handler: nil)
+        let shareAction = UITableViewRowAction(style: .Default, title: NSLocalizedString("Share", comment: "Share action")) { (action, indexPath) -> Void in
+            let shareMenu = UIAlertController(title: nil, message: NSLocalizedString("Share using", comment: "For social sharing"), preferredStyle: .Alert)
+            let twitterAction = UIAlertAction(title: NSLocalizedString("Twitter", comment: "For sharing on Twitter"), style: .Default, handler: nil)
+            let facebookAction = UIAlertAction(title: NSLocalizedString("FaceBook", comment: "For sharing on Facebook"), style: .Default, handler: nil)
+            let emailAction = UIAlertAction(title: NSLocalizedString("Email", comment: "For sharing on Email"), style: .Default, handler: nil)
+            let cancelAction = UIAlertAction(title: NSLocalizedString("Cancel", comment: "Cancel"), style: .Cancel, handler: nil)
             shareMenu.addAction(twitterAction)
             shareMenu.addAction(facebookAction)
             shareMenu.addAction(emailAction)
@@ -171,7 +167,7 @@ class RestaurantTableTableViewController: UITableViewController, NSFetchedResult
             self.presentViewController(shareMenu, animated: true, completion: nil)
         }
         
-        let deleteAction = UITableViewRowAction(style: .Default, title: "Delete") { (action, indexPath) -> Void in
+        let deleteAction = UITableViewRowAction(style: .Default, title: NSLocalizedString("Delete", comment:"Delete")) { (action, indexPath) -> Void in
             // Delete the row from the data source
             let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
             let restaurantToDelete = self.fetchResultController.objectAtIndexPath(indexPath) as! Restaurant

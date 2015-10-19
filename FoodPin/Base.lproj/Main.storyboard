@@ -523,13 +523,9 @@
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YE7-RK-j0a">
-                                                    <rect key="frame" x="134" y="37" width="30" height="30"/>
+                                                    <rect key="frame" x="134" y="37" width="40" height="30"/>
                                                     <animations/>
                                                     <color key="backgroundColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="30" id="Xle-Qg-bHL"/>
-                                                        <constraint firstAttribute="width" constant="30" id="zOD-vJ-sCH"/>
-                                                    </constraints>
                                                     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <state key="normal" title="NO"/>
                                                     <connections>
@@ -540,9 +536,11 @@
                                             <animations/>
                                             <constraints>
                                                 <constraint firstItem="4Zr-3y-3iD" firstAttribute="leading" secondItem="sGt-ZC-l9m" secondAttribute="leadingMargin" id="O6W-r6-Xgb"/>
-                                                <constraint firstItem="YE7-RK-j0a" firstAttribute="leading" secondItem="yqU-iY-bfx" secondAttribute="trailing" constant="78" id="SJq-Oa-2Su"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="YE7-RK-j0a" secondAttribute="bottom" constant="-3.5" id="R7U-Ge-8sb"/>
+                                                <constraint firstItem="YE7-RK-j0a" firstAttribute="height" secondItem="yqU-iY-bfx" secondAttribute="height" id="WIc-cT-jB8"/>
                                                 <constraint firstItem="yqU-iY-bfx" firstAttribute="leading" secondItem="sGt-ZC-l9m" secondAttribute="leadingMargin" constant="8" id="daC-vQ-hAO"/>
-                                                <constraint firstItem="YE7-RK-j0a" firstAttribute="top" secondItem="4Zr-3y-3iD" secondAttribute="bottom" constant="8" id="p7b-YQ-bYF"/>
+                                                <constraint firstItem="YE7-RK-j0a" firstAttribute="width" secondItem="yqU-iY-bfx" secondAttribute="width" id="pMU-mt-07Q"/>
+                                                <constraint firstItem="YE7-RK-j0a" firstAttribute="leading" secondItem="yqU-iY-bfx" secondAttribute="trailing" constant="78" id="r48-RR-0jl"/>
                                                 <constraint firstItem="4Zr-3y-3iD" firstAttribute="top" secondItem="sGt-ZC-l9m" secondAttribute="topMargin" id="tUa-Mm-Ynz"/>
                                                 <constraint firstItem="yqU-iY-bfx" firstAttribute="top" secondItem="4Zr-3y-3iD" secondAttribute="bottom" constant="8" id="zUw-cf-34k"/>
                                             </constraints>

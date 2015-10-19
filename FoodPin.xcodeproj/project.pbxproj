@@ -22,6 +22,8 @@
 		018E05C41BD102EE00765D2D /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018E05C31BD102EE00765D2D /* MapViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		018E05C81BD13AF900765D2D /* AddTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018E05C71BD13AF900765D2D /* AddTableTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		0190EDBF1BCE863000729BC9 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0190EDBE1BCE863000729BC9 /* Restaurant.swift */; settings = {ASSET_TAGS = (); }; };
+		01B2CC011BD4B320006AFD30 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 01B2CC031BD4B320006AFD30 /* Localizable.strings */; };
+		01B2CC081BD4B321006AFD30 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 01B2CC0A1BD4B321006AFD30 /* InfoPlist.strings */; };
 		01F89C121BD33EE500C4AB95 /* PageContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F89C111BD33EE500C4AB95 /* PageContentViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		01F89C141BD3418100C4AB95 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F89C131BD3418100C4AB95 /* PageViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		01F89C161BD3DF1F00C4AB95 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F89C151BD3DF1F00C4AB95 /* AboutViewController.swift */; settings = {ASSET_TAGS = (); }; };
@@ -46,6 +48,10 @@
 		018E05C31BD102EE00765D2D /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		018E05C71BD13AF900765D2D /* AddTableTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTableTableViewController.swift; sourceTree = "<group>"; };
 		0190EDBE1BCE863000729BC9 /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+		01B2CC021BD4B320006AFD30 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		01B2CC041BD4B320006AFD30 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		01B2CC051BD4B321006AFD30 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		01B2CC091BD4B321006AFD30 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		01F89C111BD33EE500C4AB95 /* PageContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageContentViewController.swift; sourceTree = "<group>"; };
 		01F89C131BD3418100C4AB95 /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		01F89C151BD3DF1F00C4AB95 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +90,8 @@
 		016266C11BCDFE0E009D06E1 /* FoodPin */ = {
 			isa = PBXGroup;
 			children = (
+				01B2CC0A1BD4B321006AFD30 /* InfoPlist.strings */,
+				01B2CC031BD4B320006AFD30 /* Localizable.strings */,
 				016266DE1BCE7BF7009D06E1 /* Controllers */,
 				016266DD1BCE7BF1009D06E1 /* Views */,
 				016266DC1BCE7BE9009D06E1 /* Models */,
@@ -195,8 +203,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				016266CD1BCDFE0E009D06E1 /* LaunchScreen.storyboard in Resources */,
+				01B2CC011BD4B320006AFD30 /* Localizable.strings in Resources */,
 				016266CA1BCDFE0E009D06E1 /* Assets.xcassets in Resources */,
 				016266C81BCDFE0E009D06E1 /* Main.storyboard in Resources */,
+				01B2CC081BD4B321006AFD30 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,6 +242,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				016266C71BCDFE0E009D06E1 /* Base */,
+				01B2CC041BD4B320006AFD30 /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -240,8 +251,25 @@
 			isa = PBXVariantGroup;
 			children = (
 				016266CC1BCDFE0E009D06E1 /* Base */,
+				01B2CC051BD4B321006AFD30 /* zh-Hans */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		01B2CC031BD4B320006AFD30 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				01B2CC021BD4B320006AFD30 /* zh-Hans */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		01B2CC0A1BD4B321006AFD30 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				01B2CC091BD4B321006AFD30 /* zh-Hans */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

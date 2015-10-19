@@ -50,18 +50,18 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
         cell.mapButton.hidden =  true
         switch indexPath.row {
         case 0:
-            cell.fieldLabel.text = "Name"
+            cell.fieldLabel.text = NSLocalizedString("Name", comment:"detailViewcontrolelr->name")
             cell.valueLabel.text = restaurant.name
         case 1:
-            cell.fieldLabel.text = "Type"
+            cell.fieldLabel.text = NSLocalizedString("Type", comment:"detailViewcontrolelr->Type")
             cell.valueLabel.text = restaurant.type
         case 2:
-            cell.fieldLabel.text = "Location"
+            cell.fieldLabel.text = NSLocalizedString("Location", comment:"detailViewcontrolelr->Location")
             cell.valueLabel.text = restaurant.location
             cell.mapButton.hidden = false
         case 3:
-            cell.fieldLabel.text = "Been here"
-            cell.valueLabel.text = restaurant.isVisited.boolValue ? "Yes, I've been here before" : "No"
+            cell.fieldLabel.text = NSLocalizedString("Been here", comment:"detailViewcontrolelr->Been here")
+            cell.valueLabel.text = restaurant.isVisited.boolValue ? NSLocalizedString("Yes, I've been here before", comment:"detailViewcontrolelr->Yes, I've been here before") : NSLocalizedString("No", comment:"detailViewcontrolelr->NO")
         default:
             cell.fieldLabel.text = ""
             cell.valueLabel.text = ""

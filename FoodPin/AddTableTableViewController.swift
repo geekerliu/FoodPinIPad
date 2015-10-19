@@ -59,7 +59,7 @@ class AddTableTableViewController: UITableViewController, UIImagePickerControlle
     }
     
     @IBAction func yesOrNoButtonBeenTaped(sender: UIButton) {
-        if sender.titleLabel?.text == "YES" {
+        if sender.titleLabel?.text == "YES" || sender.titleLabel?.text == "来过"{
             yesButton.backgroundColor = UIColor.redColor()
             noButton.backgroundColor = UIColor.grayColor()
             isVisited = true
