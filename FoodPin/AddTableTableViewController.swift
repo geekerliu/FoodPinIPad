@@ -30,6 +30,15 @@ class AddTableTableViewController: UITableViewController, UIImagePickerControlle
     }
     
     @IBAction func save(sender: UIBarButtonItem) {
+        if nameTextField.text!.isEmpty || typeTextField.text!.isEmpty || locationTextField.text!.isEmpty {
+            
+            let alertView = UIAlertController(title: nil, message: NSLocalizedString("Content can not be empty", comment: "Content can not be empty"), preferredStyle: .Alert)
+            let cancelAction = UIAlertAction(title: NSLocalizedString("OK", comment: "OK"), style: .Default, handler: nil)
+            alertView.addAction(cancelAction)
+            self.presentViewController(alertView, animated: true, completion: nil)
+            
+            return
+        }
         //获取管理对象上下文
         let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
         //创建管理对象实体
